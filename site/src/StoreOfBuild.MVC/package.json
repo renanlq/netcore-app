@@ -1,0 +1,11 @@
+{
+  "name": "StoreOfBuild.MVC",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Renan",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1"
+  }
+}
