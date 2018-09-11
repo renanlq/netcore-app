@@ -1,6 +1,6 @@
 using System;
 
-namespace StoreOfBuild.MVC.Models
+namespace StoreOfBuild.Web.Models
 {
     public class ErrorViewModel
     {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace StoreOfBuild.MVC
+namespace StoreOfBuild.Web
 {
     public class Startup
     {
