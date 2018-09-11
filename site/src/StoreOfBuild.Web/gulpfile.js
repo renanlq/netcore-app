@@ -26,7 +26,7 @@ gulp.task('js', function(){
        './node_modules/jquery/dist/jquery.min.js',
        './node_modules/jquery-validation/dist/jquery.validate.min.js',
        './node_modules/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js',
-       './Js/site.js',
+       './Js/site.js'
     ])
     .pipe(gulp.dest('wwwroot/js/'))
     .pipe(browserSync.stream());
@@ -36,7 +36,7 @@ gulp.task('css', function(){
 
     return gulp.src([
         './Style/site.css',
-        './node_modules/bootstrap/dist/css/bootstrap.css',
+        './node_modules/bootstrap/dist/css/bootstrap.css'
     ])
     .pipe(concat('site.min.css'))
     .pipe(cssmin())
