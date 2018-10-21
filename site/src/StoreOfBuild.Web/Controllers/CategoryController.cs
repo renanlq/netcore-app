@@ -32,6 +32,7 @@ namespace StoreOfBuild.Web.Controllers
         [HttpPost]
         public IActionResult CreateOrEdit(CategoryVO category)
         {
+            _caregoryStorer.Store(category);
             return View();
         }
     }

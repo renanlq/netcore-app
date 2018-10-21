@@ -14,6 +14,7 @@ namespace StoreOfBuild.DI
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(conn));
             // Inject depedencies
             services.AddSingleton(typeof(IRepository<>), typeof(Repository<>));
+            services.AddSingleton(typeof(IUnitOfWork), typeof(UnitOfWork));
             services.AddSingleton(typeof(CategoryStorer));
         }
     }
