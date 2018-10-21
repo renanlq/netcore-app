@@ -14,20 +14,20 @@ namespace StoreOfBuild.Domain
             _categoryRepository = categoryRepository;
         }
 
-        public void Store(ProductVO productVO)
+        public void Store(int id, string name, decimal price, int stock, int categoryId)
         {
-            var category = _categoryRepository.GetById(productVO.CategoryId);
+            var category = _categoryRepository.GetById(categoryId);
             DomainException.When(category == null, "Categoria inválida.");
 
-            var product = _productRepository.GetById(productVO.Id);
+            var product = _productRepository.GetById(id);
             if (product == null)
             {
-                product = new Product(productVO.Name, category, productVO.Price, productVO.Stock);
+                product = new Product(name, category, price, stock);
                 _productRepository.Save(product);
             }
             else
             {
-                product.Update(productVO.Name, category, productVO.Price, productVO.Stock);
+                product.Update(name, category, price, stock);
             }
         }
     }

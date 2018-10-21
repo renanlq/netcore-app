@@ -12,17 +12,17 @@ namespace StoreOfBuild.Domain
             _categoryRepository = categoryRepository;
         }
 
-        public void  Store(CategoryVO categoryVO)
+        public void Store(int id, string name)
         {
-            var category = _categoryRepository.GetById(categoryVO.Id);
+            var category = _categoryRepository.GetById(id);
             if (category == null)
             {
-                category = new Category(category.Name);
+                category = new Category(name);
                 _categoryRepository.Save(category);
             }
             else
             {
-                category.Update(category.Name);
+                category.Update(name);
             }
         }
     }
